@@ -32,7 +32,7 @@ async def on_ready():
 client.run(os.getenv("TOKEN"))
 ```
 
-[contact me (Soon)](https://dsc.gg/parisa).
+[Support Server](https://dsc.gg/parisa).
 
 **DO NOT GIVE YOUR TOKEN TO OTHERS!**
 
