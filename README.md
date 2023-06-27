@@ -15,11 +15,17 @@ Main.py File :
 import discord
 import os
 from discord.ext import commands
+from keep_alive import keep_alive
 
-client=commands.Bot(command_prefix=':', self_bot=True, help_command=None)
 
-GUILD_ID = YOUR_GUILD_ID_HERE
-CHANNEL_ID = YOUR_CHANNEL_ID_HERE
+intents = discord.Intents.default()
+
+
+client = commands.Bot(command_prefix=':', intents=intents, self_bot=True, help_command=None)
+
+
+GUILD_ID = 852009601222049834
+CHANNEL_ID = 1022568912262545448
 
 @client.event
 async def on_ready():
@@ -29,7 +35,9 @@ async def on_ready():
     await vc.guild.change_voice_state(channel=vc, self_mute=True, self_deaf=True)
     print(f"Successfully joined {vc.name} ({vc.id})")
 
+keep_alive()
 client.run(os.getenv("TOKEN"))
+
 ```
 
 [Support Server](https://dsc.gg/parisa).
@@ -44,4 +52,4 @@ Use [uptimerobot.com](https://uptimerobot.com) to make your repl online 24/7.
 
 ----
 
-> Voicecord by Mrtwix450 is licensed under Attribution 2.0 International 
+> Voicecord by Alkhazalih is licensed under Attribution 2.0 International 
