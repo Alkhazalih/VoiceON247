@@ -3,7 +3,12 @@ import os
 from discord.ext import commands
 from keep_alive import keep_alive
 
-client=commands.Bot(command_prefix=':', self_bot=True, help_command=None)
+
+intents = discord.Intents.default()
+
+
+client = commands.Bot(command_prefix=':', intents=intents, self_bot=True, help_command=None)
+
 
 GUILD_ID = 852009601222049834
 CHANNEL_ID = 1022568912262545448
